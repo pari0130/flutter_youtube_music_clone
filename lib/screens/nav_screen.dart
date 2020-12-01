@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ymusic/config/palette.dart';
+import 'package:ymusic/screens/screens.dart';
 import 'package:ymusic/widgets/widgets.dart';
 
 class NavScreen extends StatefulWidget {
@@ -9,8 +10,7 @@ class NavScreen extends StatefulWidget {
 
 class _NavScreenState extends State<NavScreen> {
   final List<Widget> _screens = [
-    Scaffold(),
-//    HomeScreen(),
+    HomeScreen(),
     Scaffold(),
     Scaffold(),
   ];

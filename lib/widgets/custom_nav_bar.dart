@@ -16,7 +16,7 @@ class CustomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      backgroundColor: Palette.botNavBar,
+      backgroundColor: Palette.customBar,
       type: BottomNavigationBarType.fixed,
       items: icons
           .map(
