@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ymusic/config/palette.dart';
 import 'package:ymusic/data/data.dart';
 import 'package:ymusic/models/models.dart';
@@ -45,14 +46,8 @@ class _HomeScreenMobile extends StatelessWidget {
         SliverAppBar(
           brightness: Brightness.light,
           backgroundColor: Palette.customBar,
-          title: Text(
-            'facebook',
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 28.0,
-              fontWeight: FontWeight.bold,
-              letterSpacing: -1.2, // 상단 title 문구 간격 조정
-            ),
+          title: Container(
+            child: SvgPicture.asset('assets/images/ymusic_logo1.svg'),
           ),
           centerTitle: false,
           // title 글자 가운데 정렬 여부
