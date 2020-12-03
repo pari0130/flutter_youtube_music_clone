@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:ymusic/config/palette.dart';
 
-class CustomNavBar extends StatelessWidget {
+class FooterNavBar extends StatelessWidget {
   final Map<String, IconData> icons;
   final int currentIndex;
   final Function(int) onTap;
 
-  const CustomNavBar(
+  const FooterNavBar(
       {Key key,
       @required this.icons,
       @required this.currentIndex,

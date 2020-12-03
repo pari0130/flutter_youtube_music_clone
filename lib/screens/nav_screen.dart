@@ -31,7 +31,7 @@ class _NavScreenState extends State<NavScreen> {
         children: _screens,
       ),
       bottomNavigationBar: Container(
-        child: CustomNavBar(
+        child: FooterNavBar(
           icons: _icons,
           currentIndex: _currentIndex,
           onTap: (index) => setState(() => _currentIndex = index),

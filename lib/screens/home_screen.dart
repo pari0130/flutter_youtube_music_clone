@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ymusic/assets.dart';
 import 'package:ymusic/config/palette.dart';
 import 'package:ymusic/data/data.dart';
 import 'package:ymusic/models/models.dart';
@@ -43,29 +44,7 @@ class _HomeScreenMobile extends StatelessWidget {
     return CustomScrollView(
       controller: scrollController,
       slivers: [
-        SliverAppBar(
-          brightness: Brightness.light,
-          backgroundColor: Palette.customBar,
-          title: Container(
-            child: SvgPicture.asset('assets/images/ymusic_logo1.svg'),
-          ),
-          centerTitle: false,
-          // title 글자 가운데 정렬 여부
-          floating: true,
-          // 스크롤 시 상단 자동 숨김
-          actions: [
-//            CircleButton(
-//              icon: Icons.search,
-//              iconSize: 30.0,
-//              onPressed: () => print('Search'),
-//            ),
-//            CircleButton(
-//              icon: MdiIcons.facebookMessenger,
-//              iconSize: 30.0,
-//              onPressed: () => print('Search'),
-//            ),
-          ],
-        ),
+        HeaderAppBar(),
         SliverPadding(
           padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
           sliver: SliverToBoxAdapter(
