@@ -8,12 +8,12 @@ import 'package:ymusic/widgets/widgets.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:ymusic/config/palette.dart';
 
-class HomeScreen extends StatefulWidget {
+class TourScreen extends StatefulWidget {
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _TourScreenState createState() => _TourScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _TourScreenState extends State<TourScreen> {
   final TrackingScrollController _trackingScrollController =
       TrackingScrollController();
 
@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    print('home screen init');
+    print('tour screen init');
   }
 
   @override

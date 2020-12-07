@@ -11,8 +11,8 @@ class NavScreen extends StatefulWidget {
 class _NavScreenState extends State<NavScreen> {
   final List<Widget> _screens = [
     HomeScreen(),
-    Scaffold(),
-    Scaffold(),
+    TourScreen(),
+    StoreScreen(),
   ];
   final Map<String, IconData> _icons = const {
     '홈': Icons.home,
@@ -34,7 +34,11 @@ class _NavScreenState extends State<NavScreen> {
         child: FooterNavBar(
           icons: _icons,
           currentIndex: _currentIndex,
-          onTap: (index) => setState(() => _currentIndex = index),
+          onTap: (index) =>
+          {
+            print('test => ${_currentIndex}'),
+            setState(() => _currentIndex = index),
+          },
         ),
       )
     );
