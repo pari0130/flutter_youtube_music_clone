@@ -16,9 +16,11 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final TrackingScrollController _trackingScrollController =
       TrackingScrollController();
+  final ScrollController scrollDetect = ScrollController();
 
   @override
   void dispose() {
+    print('test111');
     _trackingScrollController.dispose();
     super.dispose();
   }
@@ -26,7 +28,9 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    print('home screen init');
+    scrollDetect.addListener(() {
+      print('offset = ${scrollDetect.offset}');
+    });
   }
 
   @override
@@ -63,7 +67,7 @@ class _HomeScreenMobile extends StatelessWidget {
         SliverList(
           delegate: SliverChildBuilderDelegate(
             (context, index) {
-              return ListTile(title: Text("Item $index"));
+              return ListTile(title: Text("Item $index"), tileColor: Colors.white);
             },
             childCount: 20,
           ),
