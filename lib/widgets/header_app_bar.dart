@@ -7,9 +7,8 @@ import 'package:ymusic/models/models.dart';
 import 'package:ymusic/widgets/widgets.dart';
 
 class HeaderAppBar extends StatelessWidget {
-  final bool pinned;
 
-  const HeaderAppBar({Key key, this.pinned}) : super(key: key);
+  const HeaderAppBar({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +22,14 @@ class HeaderAppBar extends StatelessWidget {
       // title 글자 가운데 정렬 여부
       floating: true,
       // 스크롤 시 상단 자동 숨김
-      pinned : true,
       actions: [
+        IconButton(
+          padding: EdgeInsets.zero,
+          icon: Icon(Icons.cast),
+          iconSize: 28.0,
+          color: Colors.white,
+          onPressed: () => print('Cast'),
+        ),
         IconButton(
           padding: EdgeInsets.zero,
           icon: Icon(Icons.search),

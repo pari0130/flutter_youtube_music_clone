@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:ymusic/config/palette.dart';
 import 'package:ymusic/screens/screens.dart';
 import 'package:ymusic/widgets/widgets.dart';
@@ -22,9 +23,18 @@ class _NavScreenState extends State<NavScreen> {
   int _currentIndex = 0;
 
   @override
+  void dispose() {
+    super.dispose();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: null,
       // 현재 선택된 화면을 나타냄.
       body: IndexedStack(
         index: _currentIndex,
@@ -34,13 +44,12 @@ class _NavScreenState extends State<NavScreen> {
         child: FooterNavBar(
           icons: _icons,
           currentIndex: _currentIndex,
-          onTap: (index) =>
-          {
-            print('test => ${_currentIndex}'),
+          onTap: (index) => {
+            print('test => $index'),
             setState(() => _currentIndex = index),
           },
         ),
-      )
+      ),
     );
   }
 }
