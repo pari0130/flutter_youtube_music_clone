@@ -58,7 +58,7 @@ class _HomeScreenMobile extends StatelessWidget {
           ),
           SliverPadding(
             // 최 상단 즐겨듣는음악 이외에는 top padding 을 추가
-            padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
+            padding: const EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 2.0),
             sliver: SliverToBoxAdapter(
               child: ContentList(
                 key: PageStorageKey('reMusicList'),

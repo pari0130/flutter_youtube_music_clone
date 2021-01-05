@@ -51,23 +51,6 @@ class _HomeScreenMobile extends StatelessWidget {
       controller: scrollController,
       slivers: [
         HeaderAppBar(),
-        SliverPadding(
-          padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
-          sliver: SliverToBoxAdapter(
-//            child: Stories(
-//              currentUser: currentUser,
-//              stories: stories,
-//            ),
-              ),
-        ),
-        SliverList(
-          delegate: SliverChildBuilderDelegate(
-            (context, index) {
-              return ListTile(title: Text("Item $index"));
-            },
-            childCount: 20,
-          ),
-        ),
       ],
     );
   }
